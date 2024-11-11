@@ -71,12 +71,12 @@ Make sure to include the import:
 
 ### Making random base64 strings
 
-`randomBase64, err := pseudorand.Base64String(<insert-num-of-bytes>, false)`
+`randomBase64 := pseudorand.Base64String(<insert-num-of-bytes>, false)`
 
 ### Making random URL-safe base64 strings
 
-`randomBase64, err := pseudorand.Base64String(<insert-num-of-bytes>, true)`
+`randomBase64 := pseudorand.Base64String(<insert-num-of-bytes>, true)`
 
 ### Making random hexadecimal strings
 
-`randomHex, err := pseudorand.HexString(<insert-num-of-bytes>)`
+`randomHex := pseudorand.HexString(<insert-num-of-bytes>)`
