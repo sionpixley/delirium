@@ -18,7 +18,7 @@ Make sure to include the import:
 
 ### Producing random base64 strings
 
-`randomBase64 := delirium.RandomBase64String(<insert-length-of-string>)`
+`randomBase64 := delirium.RandomBase64String(<insert-num-of-bytes>)`
 
 ### Producing random integers
 

@@ -7,8 +7,8 @@ import (
 	"math"
 )
 
-func RandomBase64String(length int) (string, error) {
-	b, err := RandomBytes(length)
+func RandomBase64String(numOfBytes int) (string, error) {
+	b, err := RandomBytes(numOfBytes)
 	if err != nil {
 		return "", err
 	}
