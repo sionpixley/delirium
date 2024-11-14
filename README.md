@@ -5,20 +5,20 @@ Delirium is a CLI tool and Go library that produces random values. Supports cryp
 ## Table of contents
 
 1. [Project directory structure](#project-directory-structure)
-2. [How to install CLI](#how-to-install-delirium-cli-tool)
-3. [How to use CLI](#how-to-use-delirium-cli)
+2. [How to install the CLI](#how-to-install-delirium-cli-tool)
+3. [How to use the CLI](#how-to-use-delirium-cli)
     1. [Printing help and usage information](#printing-help-and-usage-information)
     2. [Making random base64 strings](#making-random-base64-strings)
     3. [Making random URL-safe base64 strings](#making-random-url-safe-base64-strings)
     4. [Making random hexadecimal strings](#making-random-hexadecimal-strings)
-4. [How to install library](#how-to-install-delirium-go-library)
-5. [How to use library](#how-to-use-delirium-go-library)
-    1. [How to use securerand](#how-to-use-securerand)
+4. [How to install the library](#how-to-install-delirium-library)
+5. [How to use the library](#how-to-use-delirium-library)
+    1. [securerand](#securerand)
         1. [Making random bytes](#making-random-bytes)
         2. [Making random base64 strings](#making-random-base64-strings-1)
         3. [Making random URL-safe base64 strings](#making-random-url-safe-base64-strings-1)
         4. [Making random hexadecimal strings](#making-random-hexadecimal-strings-1)
-    2. [How to use pseudorand](#how-to-use-pseudorand)
+    2. [pseudorand](#pseudorand)
         1. [Making random bytes](#making-random-bytes-1)
         2. [Making random base64 strings](#making-random-base64-strings-2)
         3. [Making random URL-safe base64 strings](#making-random-url-safe-base64-strings-2)
@@ -103,15 +103,15 @@ Regardless of the encoding used, you can still specify the number of bytes to us
 
 `delirium -v`
 
-## How to install Delirium Go library
+## How to install Delirium library
 
 `go get github.com/sionpixley/delirium`
 
-## How to use Delirium Go library
+## How to use Delirium library
 
-Delirium comes with two Go packages: `securerand` and `pseudorand`. The `securerand` package is a wrapper around the Go standard library [crypto/rand](https://pkg.go.dev/crypto/rand) and produces cryptographically-secure random values. The `pseudorand` package is a wrapper around the Go standard library [math/rand/v2](https://pkg.go.dev/math/rand/v2) and produces random values that are not cryptographically-secure.
+Delirium is a Go module that comes with two packages: `securerand` and `pseudorand`. The `securerand` package is a wrapper around the Go standard library [crypto/rand](https://pkg.go.dev/crypto/rand) and produces cryptographically-secure random values. The `pseudorand` package is a wrapper around the Go standard library [math/rand/v2](https://pkg.go.dev/math/rand/v2) and produces random values that are not cryptographically-secure.
 
-### How to use securerand
+### securerand
 
 Make sure to include the import:
 
@@ -133,7 +133,7 @@ Make sure to include the import:
 
 `secureRandomHex, err := securerand.HexString(<insert-num-of-bytes>)`
 
-### How to use pseudorand
+### pseudorand
 
 Make sure to include the import:
 
