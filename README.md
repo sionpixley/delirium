@@ -55,7 +55,9 @@ delirium
 
 I currently do not provide any pre-built binaries for this tool. In order to install the CLI, you will need to install Go first and then run this command after Go has been installed:
 
-`go install github.com/sionpixley/delirium`
+`go install github.com/sionpixley/delirium/cmd/delirium@latest`
+
+Make sure the GOPATH bin directory is in your PATH environment variable or the `delirium` command won't be found.
 
 ## How to use Delirium CLI
 
