@@ -15,7 +15,7 @@ import (
 func main() {
 	defer fmt.Println()
 
-	if slices.Contains(os.Args, "-v") || slices.Contains(os.Args, "-version") {
+	if slices.Contains(os.Args, "-v") || slices.Contains(os.Args, "-version") || slices.Contains(os.Args, "--version") {
 		fmt.Println(constants.VERSION)
 		return
 	}

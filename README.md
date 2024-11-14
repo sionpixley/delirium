@@ -59,6 +59,8 @@ I currently do not provide any pre-built binaries for this tool. In order to ins
 
 ## How to use Delirium CLI
 
+The `delirium` command does not require sudo/admin to use.
+
 ### Printing help and usage information
 
 `delirium -h`
