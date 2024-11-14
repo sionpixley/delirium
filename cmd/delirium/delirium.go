@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"os"
+	"slices"
 
 	"github.com/sionpixley/delirium/internal/constants"
 	"github.com/sionpixley/delirium/pkg/pseudorand"
@@ -12,6 +14,11 @@ import (
 
 func main() {
 	defer fmt.Println()
+
+	if slices.Contains(os.Args, "-v") || slices.Contains(os.Args, "-version") {
+		fmt.Println(constants.VERSION)
+		return
+	}
 
 	flag.Usage = func() {
 		fmt.Println(constants.HELP)

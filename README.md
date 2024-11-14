@@ -97,6 +97,10 @@ Regardless of the encoding used, you can still specify the number of bytes to us
 
 `delirium -encoding hex -B 20 -secure`
 
+### Printing your current version of Delirium
+
+`delirium -v`
+
 ## How to install Delirium Go library
 
 `go get github.com/sionpixley/delirium`

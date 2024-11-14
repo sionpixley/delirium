@@ -16,7 +16,10 @@ Options:
   -encoding <value>    : Chooses the encoding used on the random algorithm. Valid values are 'base64', 'base64url', or 'hex'.
                          Default is 'base64'.
   -h                   : Prints help and usage information.
-  -secure=[<boolean>]  : If 'true', the random algorithm will produce cryptographically-secure random values. Default is 'false'.`
+  -secure=[<boolean>]  : If 'true', the random algorithm will produce cryptographically-secure random values. Default is 'false'.
+  -v, -version         : Prints the current version of Delirium.`
 
 	INVALID_ENCODING_VALUE string = "delirium: invalid value for the encoding flag"
+
+	VERSION string = "v0.2.0"
 )
