@@ -53,7 +53,7 @@ delirium
 
 ## How to install Delirium CLI tool
 
-I currently do not provide any pre-built binaries for this tool. In order to install the CLI, you will need to install Go first and then run this command after Go has been installed:
+I currently do not provide any prebuilt binaries for this tool. In order to install the CLI, you will need to install Go first and then run this command after Go has been installed:
 
 `go install github.com/sionpixley/delirium/cmd/delirium@latest`
 
@@ -85,21 +85,21 @@ To change the algorithm to be cryptographically-secure, add the `-secure` flag:
 
 To change the encoding to use base64's URL-safe encoding, specify the `-encoding` flag with the value `base64url`:
 
-`delirium -encoding base64url`
+`delirium -encoding=base64url`
 
 Regardless of the encoding used, you can still specify the number of bytes to use and whether to make the algorithm cryptographically-secure:
 
-`delirium -encoding base64url -B 20 -secure`
+`delirium -encoding=base64url -B 20 -secure`
 
 ### Making random hexadecimal strings
 
 To change the encoding to use hexadecimal, specify the `-encoding` flag with the value `hex`:
 
-`delirium -encoding hex`
+`delirium -encoding=hex`
 
 Regardless of the encoding used, you can still specify the number of bytes to use and whether to make the algorithm cryptographically-secure:
 
-`delirium -encoding hex -B 20 -secure`
+`delirium -encoding=hex -B 20 -secure`
 
 ### Printing your current version of Delirium
 
