@@ -1,6 +1,6 @@
 # Delirium
 
-Delirium is a CLI tool and Go library that produces random values. Supports cryptographically-secure random values and non-cryptographically-secure random values. 
+Delirium is a CLI tool and Go library that produces random values. Supports cryptographically-secure random values. 
 
 ## Table of contents
 
