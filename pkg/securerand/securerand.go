@@ -1,3 +1,10 @@
+/*
+Package securerand produces cryptographically-secure random values.
+
+This package is a wrapper around [crypto/rand].
+
+[crypto/rand]: https://pkg.go.dev/crypto/rand
+*/
 package securerand
 
 import (
