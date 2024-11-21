@@ -1,3 +1,11 @@
+/*
+Package pseudorand produces non-cryptographically-secure random values.
+For cryptographically-secure random values, use package securerand.
+
+This package is a wrapper around [math/rand/v2].
+
+[math/rand/v2]: https://pkg.go.dev/math/rand/v2
+*/
 package pseudorand
 
 import (
@@ -8,7 +16,7 @@ import (
 
 /*
 Makes a random base64 string.
-It is not cryptographically-secure. Use the 'securerand' package if you need cryptographically-secure values.
+It is not cryptographically-secure. Use package securerand if you need cryptographically-secure values.
 
 If the 'urlSafe' argument is true then it will use base64.URLEncoding.
 If the 'urlSafe' argument is false then it will use base64.StdEncoding.
@@ -24,7 +32,7 @@ func Base64String(numOfBytes int, urlSafe bool) string {
 }
 
 // Makes a random []byte.
-// It is not cryptographically-secure. Use the 'securerand' package if you need cryptographically-secure values.
+// It is not cryptographically-secure. Use package securerand if you need cryptographically-secure values.
 func Bytes(numOfBytes int) []byte {
 	b := make([]byte, numOfBytes)
 	for i := 0; i < numOfBytes; i += 1 {
@@ -34,7 +42,7 @@ func Bytes(numOfBytes int) []byte {
 }
 
 // Makes a random hexadecimal string.
-// It is not cryptographically-secure. Use the 'securerand' package if you need cryptographically-secure values.
+// It is not cryptographically-secure. Use package securerand if you need cryptographically-secure values.
 func Hex(numOfBytes int) string {
 	b := Bytes(numOfBytes)
 	return hex.EncodeToString(b)
