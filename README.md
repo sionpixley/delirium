@@ -32,7 +32,7 @@ Delirium is a CLI tool and Go library that produces random values. Supports cryp
 ## Project directory structure
 
 ```
-delirium
+.
 ├── CODE_OF_CONDUCT.md
 ├── LICENSE
 ├── README.md
