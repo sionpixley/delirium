@@ -161,7 +161,7 @@ Make sure to include the import:
 
 ### Required technologies
 
-- Go 1.23.3
+- Go 1.23.5
 
 ### Building on Unix-like systems
 
