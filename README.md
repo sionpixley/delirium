@@ -4,7 +4,7 @@ Delirium is a CLI tool and Go library that produces random values. Supports cryp
 
 ## Table of contents
 
-1. [Project directory structure](#project-directory-structure)
+1. [Project structure](#project-structure)
 2. [How to install the CLI](#how-to-install-delirium-cli-tool)
 3. [How to use the CLI](#how-to-use-delirium-cli)
     1. [Printing help and usage information](#printing-help-and-usage-information)
@@ -29,7 +29,7 @@ Delirium is a CLI tool and Go library that produces random values. Supports cryp
     3. [Building on Windows](#building-on-windows)
 7. [Contributing](#contributing)
 
-## Project directory structure
+## Project structure
 
 ```
 .
@@ -161,7 +161,7 @@ Make sure to include the import:
 
 ### Required technologies
 
-- Go 1.23.5
+- Go 1.23.6
 
 ### Building on Unix-like systems
 
