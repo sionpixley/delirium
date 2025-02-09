@@ -164,7 +164,7 @@ Make sure to include the import:
 
 ## Building from source
 
-There are two main ways to build Delirium from source: Building with Go directly or building the Dockerfile.
+There are two main ways to build Delirium from source: [Building with Go directly](#building-directly) or [building the Dockerfile](#dockerfile).
 
 Building with the Dockerfile is good for quick local testing.
 
