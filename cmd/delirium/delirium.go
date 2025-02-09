@@ -13,8 +13,6 @@ import (
 )
 
 func main() {
-	defer fmt.Println()
-
 	if slices.Contains(os.Args, "-v") || slices.Contains(os.Args, "-version") || slices.Contains(os.Args, "--version") {
 		fmt.Println(constants.VERSION)
 		return
@@ -22,7 +20,6 @@ func main() {
 
 	flag.Usage = func() {
 		fmt.Println(constants.HELP)
-		fmt.Println()
 	}
 
 	var numOfBytes int
@@ -41,34 +38,34 @@ func main() {
 		case "base64":
 			output, err := securerand.Base64String(numOfBytes, false)
 			if err != nil {
-				log.Fatal(err.Error())
+				log.Fatalln(err.Error())
 			}
-			fmt.Print(output)
+			fmt.Println(output)
 		case "base64url":
 			output, err := securerand.Base64String(numOfBytes, true)
 			if err != nil {
-				log.Fatal(err.Error())
+				log.Fatalln(err.Error())
 			}
-			fmt.Print(output)
+			fmt.Println(output)
 		case "hex":
 			output, err := securerand.HexString(numOfBytes)
 			if err != nil {
-				log.Fatal(err.Error())
+				log.Fatalln(err.Error())
 			}
-			fmt.Print(output)
+			fmt.Println(output)
 		default:
-			log.Fatal(constants.INVALID_ENCODING_VALUE)
+			log.Fatalln(constants.INVALID_ENCODING_VALUE)
 		}
 	} else {
 		switch enc {
 		case "base64":
-			fmt.Print(pseudorand.Base64String(numOfBytes, false))
+			fmt.Println(pseudorand.Base64String(numOfBytes, false))
 		case "base64url":
-			fmt.Print(pseudorand.Base64String(numOfBytes, true))
+			fmt.Println(pseudorand.Base64String(numOfBytes, true))
 		case "hex":
-			fmt.Print(pseudorand.Hex(numOfBytes))
+			fmt.Println(pseudorand.Hex(numOfBytes))
 		default:
-			log.Fatal(constants.INVALID_ENCODING_VALUE)
+			log.Fatalln(constants.INVALID_ENCODING_VALUE)
 		}
 	}
 }

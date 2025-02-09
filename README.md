@@ -24,9 +24,13 @@ Delirium is a CLI tool and Go library that produces random values. Supports cryp
         3. [Making random URL-safe base64 strings](#making-random-url-safe-base64-strings-2)
         4. [Making random hexadecimal strings](#making-random-hexadecimal-strings-2)
 6. [Building from source](#building-from-source)
-    1. [Required technologies](#required-technologies)
-    2. [Building on Unix-like systems](#building-on-unix-like-systems)
-    3. [Building on Windows](#building-on-windows)
+    1. [Building directly](#building-directly)
+        1. [Required technologies](#required-technologies)
+        2. [Building on Unix-like systems](#building-on-unix-like-systems)
+        3. [Building on Windows](#building-on-windows)
+    2. [Dockerfile](#dockerfile)
+        1. [Required technologies](#required-technologies-1)
+        2. [Building an image](#building-an-image)
 7. [Contributing](#contributing)
 
 ## Project structure
@@ -34,19 +38,20 @@ Delirium is a CLI tool and Go library that produces random values. Supports cryp
 ```
 .
 ├── CODE_OF_CONDUCT.md
+├── Dockerfile
 ├── LICENSE
 ├── README.md
 ├── SECURITY.md
 ├── cmd
-│   └── delirium
-│       └── delirium.go
+│   └── delirium
+│       └── delirium.go
 ├── go.mod
 ├── internal
-│   └── constants
-│       └── consts.go
+│   └── constants
+│       └── consts.go
 └── pkg
     ├── pseudorand
-    │   └── pseudorand.go
+    │   └── pseudorand.go
     └── securerand
         └── securerand.go
 ```
@@ -159,17 +164,33 @@ Make sure to include the import:
 
 ## Building from source
 
-### Required technologies
+There are two main ways to build Delirium from source: Building with Go directly or building the Dockerfile.
+
+Building with the Dockerfile is good for quick local testing.
+
+### Building directly
+
+#### Required technologies
 
 - Go 1.23.6
 
-### Building on Unix-like systems
+#### Building on Unix-like systems
 
 `go build -o delirium ./cmd/delirium`
 
-### Building on Windows
+#### Building on Windows
 
 `go build -o delirium.exe ./cmd/delirium`
+
+### Dockerfile
+
+#### Required technologies
+
+- Docker
+
+#### Building an image
+
+`docker build -t delirium .`
 
 ## Contributing
 
