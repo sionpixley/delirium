@@ -63,7 +63,7 @@ func main() {
 		case "base64url":
 			fmt.Println(pseudorand.Base64String(numOfBytes, true))
 		case "hex":
-			fmt.Println(pseudorand.Hex(numOfBytes))
+			fmt.Println(pseudorand.HexString(numOfBytes))
 		default:
 			log.Fatalln(constants.INVALID_ENCODING_VALUE)
 		}

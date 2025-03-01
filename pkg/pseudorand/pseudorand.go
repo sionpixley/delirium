@@ -44,7 +44,7 @@ func Bytes(numOfBytes int) []byte {
 
 // Makes a random hexadecimal string.
 // It is not cryptographically-secure. Use package securerand if you need cryptographically-secure values.
-func Hex(numOfBytes int) string {
+func HexString(numOfBytes int) string {
 	b := Bytes(numOfBytes)
 	return hex.EncodeToString(b)
 }
