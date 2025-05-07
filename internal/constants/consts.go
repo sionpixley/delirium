@@ -23,7 +23,7 @@ Options:
     -v, -version
         Prints the current version of Delirium.`
 
-	INVALID_ENCODING_VALUE string = "delirium: invalid value for the encoding flag"
+	INVALID_ENCODING_VALUE string = "delirium error: invalid value for the encoding flag"
 
-	VERSION string = "v0.3.2"
+	VERSION string = "v0.3.3"
 )

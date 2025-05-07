@@ -37,6 +37,16 @@ Delirium is a Go library and CLI tool that produces random values. Supports cryp
 
 ```
 .
+├── .dockerignore
+├── .editorconfig
+├── .github
+│   └── ISSUE_TEMPLATE
+│       ├── bug_report.md
+│       ├── custom.md
+│       └── feature_request.md
+├── .gitignore
+├── .vscode
+│   └── launch.json
 ├── CODE_OF_CONDUCT.md
 ├── Dockerfile
 ├── LICENSE
@@ -172,7 +182,7 @@ Building with the Dockerfile is good for quick local testing.
 
 #### Required technologies
 
-- Go 1.24.2
+- Go 1.24.3
 
 #### Building on Unix-like systems
 
