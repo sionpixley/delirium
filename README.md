@@ -182,7 +182,7 @@ Building with the Dockerfile is good for quick local testing.
 
 #### Required technologies
 
-- Go 1.24.3
+- Go 1.24.4
 
 #### Building on Unix-like systems
 
