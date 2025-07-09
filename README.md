@@ -4,15 +4,14 @@ Delirium is a Go library and CLI tool that produces random values. Supports cryp
 
 ## Table of contents
 
-1. [Project structure](#project-structure)
-2. [How to install the CLI](#how-to-install-delirium-cli-tool)
-3. [How to use the CLI](#how-to-use-delirium-cli)
+1. [How to install the CLI](#how-to-install-delirium-cli-tool)
+2. [How to use the CLI](#how-to-use-delirium-cli)
     1. [Printing help and usage information](#printing-help-and-usage-information)
     2. [Making random base64 strings](#making-random-base64-strings)
     3. [Making random URL-safe base64 strings](#making-random-url-safe-base64-strings)
     4. [Making random hexadecimal strings](#making-random-hexadecimal-strings)
-4. [How to install the library](#how-to-install-delirium-library)
-5. [How to use the library](#how-to-use-delirium-library)
+3. [How to install the library](#how-to-install-delirium-library)
+4. [How to use the library](#how-to-use-delirium-library)
     1. [securerand](#securerand)
         1. [Making random bytes](#making-random-bytes)
         2. [Making random base64 strings](#making-random-base64-strings-1)
@@ -23,7 +22,7 @@ Delirium is a Go library and CLI tool that produces random values. Supports cryp
         2. [Making random base64 strings](#making-random-base64-strings-2)
         3. [Making random URL-safe base64 strings](#making-random-url-safe-base64-strings-2)
         4. [Making random hexadecimal strings](#making-random-hexadecimal-strings-2)
-6. [Building from source](#building-from-source)
+5. [Building from source](#building-from-source)
     1. [Building directly](#building-directly)
         1. [Required technologies](#required-technologies)
         2. [Building on Unix-like systems](#building-on-unix-like-systems)
@@ -31,40 +30,7 @@ Delirium is a Go library and CLI tool that produces random values. Supports cryp
     2. [Dockerfile](#dockerfile)
         1. [Required technologies](#required-technologies-1)
         2. [Building an image](#building-an-image)
-7. [Contributing](#contributing)
-
-## Project structure
-
-```
-.
-├── .dockerignore
-├── .editorconfig
-├── .github
-│   └── ISSUE_TEMPLATE
-│       ├── bug_report.md
-│       ├── custom.md
-│       └── feature_request.md
-├── .gitignore
-├── .vscode
-│   └── launch.json
-├── CODE_OF_CONDUCT.md
-├── Dockerfile
-├── LICENSE
-├── README.md
-├── SECURITY.md
-├── cmd
-│   └── delirium
-│       └── delirium.go
-├── go.mod
-├── internal
-│   └── constants
-│       └── consts.go
-└── pkg
-    ├── pseudorand
-    │   └── pseudorand.go
-    └── securerand
-        └── securerand.go
-```
+6. [Contributing](#contributing)
 
 ## How to install Delirium CLI tool
 
@@ -182,7 +148,7 @@ Building with the Dockerfile is good for quick local testing.
 
 #### Required technologies
 
-- Go 1.24.4
+- Go 1.24.5
 
 #### Building on Unix-like systems
 
