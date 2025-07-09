@@ -25,5 +25,5 @@ Options:
 
 	INVALID_ENCODING_VALUE string = "delirium error: invalid value for the encoding flag"
 
-	VERSION string = "v0.3.4"
+	VERSION string = "v0.3.5"
 )
