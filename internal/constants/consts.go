@@ -1,7 +1,7 @@
 package constants
 
 const (
-	HELP string = `Description:
+	Help string = `Description:
 
     Delirium is a CLI tool that produces random values. Supports cryptographically-secure random values.
 
@@ -23,7 +23,7 @@ Options:
     -v, -version
         Prints the current version of Delirium.`
 
-	INVALID_ENCODING_VALUE string = "delirium error: invalid value for the encoding flag"
+	InvalidEncodingError string = "delirium error: invalid value for the encoding flag"
 
-	VERSION string = "v0.3.5"
+	Version string = "v0.3.6"
 )

@@ -16,7 +16,7 @@ import (
 )
 
 /*
-Makes a random base64 string.
+Base64String function makes a random base64 string.
 It is not cryptographically-secure. Use package securerand if you need cryptographically-secure values.
 
 If the 'urlSafe' argument is true then it will use base64.URLEncoding.
@@ -32,7 +32,7 @@ func Base64String(numOfBytes int, urlSafe bool) string {
 	}
 }
 
-// Makes a random []byte.
+// Bytes function makes a random []byte.
 // It is not cryptographically-secure. Use package securerand if you need cryptographically-secure values.
 func Bytes(numOfBytes int) []byte {
 	b := make([]byte, numOfBytes)
@@ -42,7 +42,7 @@ func Bytes(numOfBytes int) []byte {
 	return b
 }
 
-// Makes a random hexadecimal string.
+// HexString function makes a random hexadecimal string.
 // It is not cryptographically-secure. Use package securerand if you need cryptographically-secure values.
 func HexString(numOfBytes int) string {
 	b := Bytes(numOfBytes)
