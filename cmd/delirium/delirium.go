@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"slices"
+	"strings"
 
 	"github.com/sionpixley/delirium/internal/constants"
 	"github.com/sionpixley/delirium/pkg/pseudorand"
@@ -14,12 +15,12 @@ import (
 
 func main() {
 	if slices.Contains(os.Args, "-v") || slices.Contains(os.Args, "-version") || slices.Contains(os.Args, "--version") {
-		fmt.Println(constants.VERSION)
+		fmt.Println(constants.Version)
 		return
 	}
 
 	flag.Usage = func() {
-		fmt.Println(constants.HELP)
+		fmt.Println(constants.Help)
 	}
 
 	var numOfBytes int
@@ -32,6 +33,8 @@ func main() {
 	flag.BoolVar(&useSecure, "secure", false, "if 'true', the random algorithm will be cryptographically-secure")
 
 	flag.Parse()
+
+	enc = strings.ToLower(enc)
 
 	if useSecure {
 		switch enc {
@@ -54,7 +57,7 @@ func main() {
 			}
 			fmt.Println(output)
 		default:
-			log.Fatalln(constants.INVALID_ENCODING_VALUE)
+			log.Fatalln(constants.InvalidEncodingError)
 		}
 	} else {
 		switch enc {
@@ -65,7 +68,7 @@ func main() {
 		case "hex":
 			fmt.Println(pseudorand.HexString(numOfBytes))
 		default:
-			log.Fatalln(constants.INVALID_ENCODING_VALUE)
+			log.Fatalln(constants.InvalidEncodingError)
 		}
 	}
 }

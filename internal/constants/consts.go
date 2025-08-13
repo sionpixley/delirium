@@ -1,7 +1,7 @@
 package constants
 
 const (
-	HELP string = `Description:
+	Help string = `Description:
 
     Delirium is a CLI tool that produces random values. Supports cryptographically-secure random values.
 
@@ -13,7 +13,7 @@ Options:
 
     -B <int>
         Number of bytes to use in the random algorithm. Default is '16'.
-    -encoding=<value>
+    -encoding <value>
         Chooses the encoding used on the random algorithm. Valid values are 'base64', 'base64url', or 'hex'.
         Default is 'base64'.
     -h, -help
@@ -23,7 +23,7 @@ Options:
     -v, -version
         Prints the current version of Delirium.`
 
-	INVALID_ENCODING_VALUE string = "delirium error: invalid value for the encoding flag"
+	InvalidEncodingError string = "delirium error: invalid value for the encoding flag"
 
-	VERSION string = "v0.3.5"
+	Version string = "v0.3.6"
 )
