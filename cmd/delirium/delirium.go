@@ -4,8 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"log"
-	"os"
-	"slices"
 	"strings"
 
 	"github.com/sionpixley/delirium/internal/constants"
@@ -14,11 +12,6 @@ import (
 )
 
 func main() {
-	if slices.Contains(os.Args, "-v") || slices.Contains(os.Args, "-version") || slices.Contains(os.Args, "--version") {
-		fmt.Println(constants.Version)
-		return
-	}
-
 	flag.Usage = func() {
 		fmt.Println(constants.Help)
 	}
@@ -29,31 +22,40 @@ func main() {
 	var enc string
 	flag.StringVar(&enc, "encoding", "base64", "the encoding to use for the random algorithm")
 
-	var useSecure bool
-	flag.BoolVar(&useSecure, "secure", false, "if 'true', the random algorithm will be cryptographically-secure")
+	var secure bool
+	flag.BoolVar(&secure, "secure", false, "if 'true', the random algorithm will be cryptographically-secure")
+
+	var version bool
+	flag.BoolVar(&version, "v", false, "print the version and exit")
+	flag.BoolVar(&version, "version", false, "print the version and exit")
+
+	if version {
+		fmt.Println(constants.Version)
+		return
+	}
 
 	flag.Parse()
 
 	enc = strings.ToLower(enc)
 
-	if useSecure {
+	if secure {
 		switch enc {
 		case "base64":
 			output, err := securerand.Base64String(numOfBytes, false)
 			if err != nil {
-				log.Fatalln(err.Error())
+				log.Fatalln(err)
 			}
 			fmt.Println(output)
 		case "base64url":
 			output, err := securerand.Base64String(numOfBytes, true)
 			if err != nil {
-				log.Fatalln(err.Error())
+				log.Fatalln(err)
 			}
 			fmt.Println(output)
 		case "hex":
 			output, err := securerand.HexString(numOfBytes)
 			if err != nil {
-				log.Fatalln(err.Error())
+				log.Fatalln(err)
 			}
 			fmt.Println(output)
 		default:

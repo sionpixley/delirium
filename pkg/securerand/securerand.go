@@ -27,9 +27,9 @@ func Base64String(numOfBytes int, urlSafe bool) (string, error) {
 
 	if urlSafe {
 		return base64.URLEncoding.EncodeToString(b), nil
-	} else {
-		return base64.StdEncoding.EncodeToString(b), nil
 	}
+
+	return base64.StdEncoding.EncodeToString(b), nil
 }
 
 // Bytes function makes a cryptographically-secure random []byte.
