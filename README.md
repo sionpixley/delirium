@@ -58,29 +58,29 @@ To change the number of bytes to use in the algorithm, specify the number of byt
 
 `delirium -B 20`
 
-To change the algorithm to be cryptographically-secure, add the `-secure` flag:
+To change the algorithm to be cryptographically-secure, add the `--secure` flag:
 
-`delirium -B 20 -secure`
+`delirium -B 20 --secure`
 
 ### Making random URL-safe base64 strings
 
-To change the encoding to use base64's URL-safe encoding, specify the `-encoding` flag with the value `base64url`:
+To change the encoding to use base64's URL-safe encoding, specify the `--encoding` flag with the value `base64url`:
 
-`delirium -encoding=base64url`
+`delirium --encoding=base64url`
 
 Regardless of the encoding used, you can still specify the number of bytes to use and whether to make the algorithm cryptographically-secure:
 
-`delirium -encoding=base64url -B 20 -secure`
+`delirium --encoding=base64url -B 20 --secure`
 
 ### Making random hexadecimal strings
 
-To change the encoding to use hexadecimal, specify the `-encoding` flag with the value `hex`:
+To change the encoding to use hexadecimal, specify the `--encoding` flag with the value `hex`:
 
-`delirium -encoding=hex`
+`delirium --encoding=hex`
 
 Regardless of the encoding used, you can still specify the number of bytes to use and whether to make the algorithm cryptographically-secure:
 
-`delirium -encoding=hex -B 20 -secure`
+`delirium --encoding=hex -B 20 --secure`
 
 ### Printing your current version of Delirium
 

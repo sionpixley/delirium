@@ -11,19 +11,19 @@ Usage:
 
 Options:
 
-    -B <int>
+    -B, --bytes <int>
         Number of bytes to use in the random algorithm. Default is '16'.
-    -encoding <value>
+    --encoding <value>
         Chooses the encoding used on the random algorithm. Valid values are 'base64', 'base64url', or 'hex'.
         Default is 'base64'.
-    -h, -help
+    -h, --help
         Prints help and usage information.
-    -secure
+    --secure
         If this flag is added, the random algorithm will produce cryptographically-secure random values.
-    -v, -version
+    -v, --version
         Prints the current version of Delirium.`
 
 	InvalidEncodingError string = "delirium error: invalid value for the encoding flag"
 
-	Version string = "v0.3.8"
+	Version string = "v0.4.0"
 )
